@@ -1,0 +1,319 @@
+/* ==========================================================================
+   Gallery.css - 3D Coverflow Perspective Layout System 
+   ========================================================================== */
+
+/* ==========================================================================
+   1. GLOBAL / SHARED STYLES (Base Structural Foundations)
+   ========================================================================== */
+.gallery-section {
+  position: relative;
+  background-color: #bae6fd;          /* Vibrant sky blue background fill from design image */
+  width: 100%;
+  overflow: hidden;
+  z-index: 1;
+}
+
+/* Playful Dynamic Dashed Header Setup */
+.gallery-title-container {
+  display: inline-block;
+  position: relative;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.gallery-main-title {
+  color: #fb923c;                     /* Exact signature warm orange */
+  font-family: 'Fredoka', sans-serif; /* Playful rounded font root */
+  font-weight: 700;
+  margin-bottom: 6px;
+  text-transform: capitalize;
+  letter-spacing: 0.5px;
+  line-height: 1.2;
+}
+
+.gallery-title-underline {
+  width: 100%;
+  height: 0;
+  border-bottom: 4px dashed #32627d;  /* Thick, clean slate-blue dashes */
+  margin: 0 auto;
+}
+
+.gallery-interactive-container {
+  position: relative;
+  z-index: 5;                         /* Sits content safely above background cloud images */
+}
+
+/* Clouds Positioning Classes */
+.gallery-cloud-backdrop {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  z-index: 2;
+  pointer-events: none;               /* Prevents image masking interactions click-blocking inputs */
+}
+
+.cloud-svg-layer {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Coverflow Wrapper Engine */
+.gallery-slider-viewport {
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+
+.gallery-slider-track {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 3D Slide Component Layouts */
+.gallery-slide {
+  position: absolute;
+  transition: transform 0.45s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.45s ease, z-index 0.45s;
+}
+
+.slide-card-inner {
+  width: 100%;
+  height: 100%;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  background-color: #ebebeb;          /* Base card skeleton color layer before image load */
+}
+
+.gallery-display-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Highlight Ring applied on the central focus image card */
+.center-highlight {
+  border: 5px solid #ffffff;          /* Clean white perimeter card accent from visual reference */
+}
+
+
+/* ==========================================================================
+   2. MOBILE VERSION (Default Layout rules up to 767px)
+   ========================================================================== */
+@media (max-width: 767px) {
+  .gallery-section {
+    padding: 4rem 0 5rem 0;
+  }
+
+  .gallery-main-title {
+    font-size: 2rem;
+  }
+
+  .gallery-title-underline {
+    border-bottom-width: 3px;
+  }
+
+  /* Cloud offsets on mobile view */
+  .cloud-top { top: -130px; }
+  .cloud-bottom { bottom: -30px; }
+
+  /* Track Heights to contain scaled objects safely */
+  .gallery-slider-viewport { height: 260px; }
+  .gallery-slider-track { height: 260px; }
+
+  .gallery-slide {
+    width: 180px;                     /* Mobile card dimensions */
+    height: 180px;
+  }
+
+  /* --- 3D Position Stacking Order Maps --- */
+  .level-far-left {
+    transform: translateX(-110px) scale(0.65);
+    opacity: 0.4;
+    z-index: 1;
+  }
+  .level-left {
+    transform: translateX(-65px) scale(0.8);
+    opacity: 0.75;
+    z-index: 2;
+  }
+  .level-center {
+    transform: translateX(0) scale(1.1);
+    opacity: 1;
+    z-index: 3;
+  }
+  .level-right {
+    transform: translateX(65px) scale(0.8);
+    opacity: 0.75;
+    z-index: 2;
+  }
+  .level-far-right {
+    transform: translateX(110px) scale(0.65);
+    opacity: 0.4;
+    z-index: 1;
+  }
+}
+
+
+/* ==========================================================================
+   3. TABLET VERSION (Screens between 768px and 991px)
+   ========================================================================== */
+@media (min-width: 768px) and (max-width: 991px) {
+  .gallery-section {
+    padding: 6rem 0 7rem 0;
+  }
+
+  .gallery-main-title {
+    font-size: 2.4rem;
+  }
+
+  .cloud-top { top: -5px; }
+  .cloud-bottom { bottom: -5px; }
+
+  .gallery-slider-viewport { height: 420px; }
+  .gallery-slider-track { height: 420px; }
+
+  .gallery-slide {
+    width: 280px;                     /* Tablet card dimensions */
+    height: 280px;
+  }
+
+  /* --- 3D Position Stacking Order Maps --- */
+  .level-far-left {
+    transform: translateX(-220px) scale(0.7);
+    opacity: 0.5;
+    z-index: 1;
+  }
+  .level-left {
+    transform: translateX(-130px) scale(0.85);
+    opacity: 0.85;
+    z-index: 2;
+  }
+  .level-center {
+    transform: translateX(0) scale(1.2);
+    opacity: 1;
+    z-index: 3;
+  }
+  .level-right {
+    transform: translateX(130px) scale(0.85);
+    opacity: 0.85;
+    z-index: 2;
+  }
+  .level-far-right {
+    transform: translateX(220px) scale(0.7);
+    opacity: 0.5;
+    z-index: 1;
+  }
+}
+
+
+/* ==========================================================================
+   4. DESKTOP VERSION (Screens 992px and up)
+   ========================================================================== */
+@media (min-width: 992px) {
+  .gallery-section {
+    padding: 9rem 0 10rem 0;          /* Roomy padding blocks to let top/bottom cloud patterns rest elegantly */
+  }
+
+  .gallery-main-title {
+    font-size: 2.75rem;
+  }
+
+  .cloud-top { top: -650px; height: 10px}
+  .cloud-bottom { bottom: -150px; height: 300px;}
+
+  /* Elevated desktop spatial dimensions matching your composition image proportions */
+  .gallery-slider-viewport { height: 500px; }
+  .gallery-slider-track { height: 500px; }
+
+  .gallery-slide {
+    width: 320px;                     /* Desktop core frame widths */
+    height: 320px;
+  }
+
+  /* --- 3D Position Stacking Order Maps --- */
+  .level-far-left {
+    transform: translateX(-340px) scale(0.68) rotateY(15deg);
+    opacity: 0.5;
+    z-index: 1;
+  }
+  .level-left {
+    transform: translateX(-190px) scale(0.86) rotateY(10deg);
+    opacity: 0.85;
+    z-index: 2;
+  }
+  .level-center {
+    transform: translateX(0) scale(1.28);
+    opacity: 1;
+    z-index: 4;
+  }
+  .level-right {
+    transform: translateX(190px) scale(0.86) rotateY(-10deg);
+    opacity: 0.85;
+    z-index: 2;
+  }
+  .level-far-right {
+    transform: translateX(340px) scale(0.68) rotateY(-15deg);
+    opacity: 0.5;
+    z-index: 1;
+  }
+}
+
+/* ==========================================================================
+   5. APPENDED SLIDER NAV CONTROLS & UTILITIES (Added for Interactivity)
+   ========================================================================== */
+.level-hidden {
+  transform: translateX(0) scale(0.5);
+  opacity: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Navigation control container layout matching your project styling buttons */
+.gallery-nav-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  margin-top: 2rem;
+  position: relative;
+  z-index: 10;
+}
+
+.gallery-nav-btn {
+  background-color: #ffffff;
+  color: #32627d;
+  border: 3px solid #32627d;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 1.25rem;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275), background-color 0.2s ease, color 0.2s ease;
+}
+
+.gallery-nav-btn:hover {
+  background-color: #fb923c;
+  color: #ffffff;
+  border-color: #fb923c;
+  transform: scale(1.1);
+}
+
+.gallery-nav-btn:active {
+  transform: scale(0.95);
+}
+
+/* Interaction smooth helper logic */
+.gallery-slide {
+  user-select: none;
+  -webkit-user-drag: none;
+}

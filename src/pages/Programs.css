@@ -1,0 +1,471 @@
+/* ==========================================================================
+   Programs.css - Grid Architecture & Carousel Components
+   ========================================================================== */
+
+/* ==========================================================================
+   1. GLOBAL / SHARED STYLES (Base Structural Foundations)
+   ========================================================================== */
+.programs-section {
+  position: relative;
+  background-color: #ffffff;          /* Clean canvas backdrop */
+  width: 100%;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.programs-interactive-container {
+  position: relative;
+  z-index: 5;
+}
+
+/* Playful Dynamic Dashed Header Setup */
+.programs-title-container {
+  display: inline-block;
+  position: relative;
+  text-align: center;
+}
+
+.programs-main-title {
+  color: #fb923c;                     /* Exact signature warm orange */
+  font-family: 'Fredoka', sans-serif; /* Playful rounded typography */
+  font-weight: 700;
+  margin-bottom: 6px;
+  text-transform: capitalize;
+  letter-spacing: 0.5px;
+  line-height: 1.2;
+}
+
+.programs-title-underline {
+  width: 100%;
+  height: 0;
+  border-bottom: 4px dashed #32627d;  /* Slate-blue dash underline */
+  margin: 0 auto;
+}
+
+.programs-subtitle {
+  color: #1f2937;                     /* Dark neutral primary body text */
+  font-family: sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+/* Structural Card Properties */
+.program-card {
+  background-color: #fca5a5;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  width: 100%;
+  margin: 0 auto;
+}
+
+.program-image-wrapper {
+  width: 100%;
+  overflow: hidden;
+}
+
+.program-display-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Content Details System */
+.program-details-content {
+  background-color: #fdba74;          /* Soft orange profile body fill */
+  text-align: center;
+}
+
+.program-card-title {
+  color: #ffffff;
+  font-family: 'Fredoka', sans-serif;
+  font-weight: 600;
+}
+
+.program-card-description {
+  color: #ffffff;
+  font-family: sans-serif;
+  font-weight: 400;
+  margin: 0;
+}
+
+/* Slider Dot Navigation Engine */
+.programs-dots-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.program-dot-btn {
+  border: none;
+  border-radius: 50%;
+  background-color: #e5e7eb;          /* Neutral gray dot unselected */
+  cursor: pointer;
+  padding: 0;
+  transition: background-color 0.3s ease, transform 0.2s;
+}
+
+.program-dot-btn.dot-active {
+  background-color: #fdba74;          /* Matches active theme orange highlight */
+  transform: scale(1.15);
+}
+
+/* --- Base Hero Layout with Requested Linear Gradient --- */
+.happy-hero-wrapper {
+  background: linear-gradient(to bottom, #7bc1ed 0%, #FFFFFF 85%);
+  position: relative;
+  overflow: visible;
+}
+
+.happy-hero-title {
+  color: #FFFFFF;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1);
+  line-height: 1.3;
+}
+
+.happy-sun-img {
+  position: absolute;
+  background-color: transparent;
+  border: none;
+}
+
+.cloud-graphic-area {
+  margin-top: 30px;
+}
+
+.happy-children-img {
+  background-color: transparent;
+  display: block;
+  position: relative;
+  z-index: 2;
+}
+
+/* --- CLOUD IMAGE OVERLAY SYSTEM --- */
+.happy-cloud-wrapper {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
+}
+
+.cloud-bg-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  filter: drop-shadow(0px 8px 16px rgba(162, 206, 237, 0.35));
+}
+
+.cloud-inner-text {
+  position: absolute;
+  display: block;
+  width: 80%;
+  top: 52%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: 700;
+  color: #333333;
+  line-height: 1.3;
+  text-align: center;
+  white-space: normal;
+  z-index: 4;
+}
+
+.faq-wrapper-section {
+  background-color: #FFFFFF;
+}
+
+.faq-main-heading {
+  color: #E99648;
+  font-weight: 700;
+  border-bottom: 2px dashed #4A7A96;
+}
+
+.faq-custom-accordion .faq-accordion-item {
+  background-color: #F4B273;
+  border-radius: 8px;
+  overflow: hidden;
+  border: none;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+}
+
+.faq-accordion-trigger {
+  background-color: #F4B273;
+  color: #FFFFFF;
+  font-weight: 600;
+  padding: 18px 25px;
+  transition: background-color 0.2s ease;
+  outline: none;
+}
+
+.faq-question-text {
+  padding-right: 15px;
+}
+
+.faq-icon-indicator {
+  font-weight: 300;
+  line-height: 1;
+}
+
+.faq-accordion-collapse {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s cubic-bezier(0, 1, 0, 1);
+}
+
+.faq-accordion-collapse.show-content {
+  max-height: 1000px;
+  transition: max-height 0.3s cubic-bezier(1, 0, 1, 0);
+}
+
+.faq-accordion-body {
+  color: #2F2F2F;
+  background-color: #F4B273;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+
+/* ==========================================================================
+   2. MOBILE VERSION (Default Layout rules up to 767px)
+   ========================================================================== */
+@media (max-width: 767px) {
+  .programs-section {
+    padding: 3rem 0;
+  }
+
+  .programs-main-title {
+    font-size: 2rem;
+  }
+
+  .programs-title-underline {
+    border-bottom-width: 3px;
+  }
+
+  .programs-subtitle {
+    font-size: 0.95rem;
+  }
+
+  /* Card configuration on mobile viewports */
+  .program-card {
+    border-radius: 16px;
+    border: 6px solid #fdba74;
+  }
+
+  .program-image-wrapper {
+    height: 220px;
+  }
+
+  .program-details-content {
+    padding: 1.5rem 1rem;
+  }
+
+  .program-card-title {
+    font-size: 1.35rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .program-card-description {
+    font-size: 0.85rem;
+    line-height: 1.45;
+  }
+
+  .programs-dots-controls {
+    gap: 8px;
+  }
+
+  .program-dot-btn {
+    width: 14px;
+    height: 14px;
+  }
+
+  /* Mobile Gradient Matching */
+  .happy-hero-wrapper {
+    background: linear-gradient(to bottom, #7bc1ed 0%, #FFFFFF 85%);
+  }
+  .happy-hero-title { font-size: 1.85rem; }
+  .happy-sun-img { width: 75px; height: 75px; right: 10%; top: -85px; }
+  
+  .cloud-graphic-area {
+    max-width: 100%;
+    width: 360px;
+    height: 210px;
+    margin: 25px auto 0 auto;
+  }
+  
+  .cloud-inner-text { 
+    font-size: 2.2vw;
+    width: 82%;
+  }
+
+  .happy-children-img {
+    width: 200px;
+    height: auto;
+    margin: 55px auto 0 auto;
+  }
+
+  .cloud-1 { top: -30%; left: 0%; width: 130px; }
+  .cloud-2 { top: -30%; right: 0%; width: 130px; }
+  .cloud-3 { top: 40%; left: -4%; width: 130px; }
+  .cloud-4 { top: 40%; right: -4%; width: 130px; }
+  
+  .faq-main-heading { font-size: 1.7rem; }
+  .faq-accordion-trigger { font-size: 1rem; padding: 14px 18px; }
+  .faq-icon-indicator { font-size: 1.3rem; }
+  .faq-accordion-body { padding: 0 18px 16px 18px; font-size: 0.9rem; }
+}
+
+
+/* ==========================================================================
+   3. TABLET VERSION (Screens between 768px and 991px)
+   ========================================================================== */
+@media (min-width: 768px) and (max-width: 991px) {
+  .programs-section {
+    padding: 4.5rem 0;
+  }
+
+  .programs-main-title {
+    font-size: 2.35rem;
+  }
+
+  .programs-subtitle {
+    font-size: 1.1rem;
+  }
+
+  /* Card properties scaled down for middle viewport structures */
+  .program-card {
+    border-radius: 20px;
+    border: 8px solid #fdba74;
+  }
+
+  .program-image-wrapper {
+    height: 320px;
+  }
+
+  .program-details-content {
+    padding: 2.25rem 2rem;
+  }
+
+  .program-card-title {
+    font-size: 1.65rem;
+    margin-bottom: 1rem;
+  }
+
+  .program-card-description {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  .programs-dots-controls {
+    gap: 12px;
+  }
+
+  .program-dot-btn {
+    width: 18px;
+    height: 18px;
+  }
+
+  /* Tablet Gradient Matching */
+  .happy-hero-wrapper {
+    background: linear-gradient(to bottom, #7bc1ed 0%, #FFFFFF 85%);
+  }
+  .happy-hero-title { font-size: 2.2rem; }
+  .happy-sun-img { width: 110px; height: 110px; right: 4%; top: -30px; }
+  
+  .cloud-graphic-area { 
+    max-width: 580px; 
+    height: 320px; 
+  }
+  .happy-children-img { 
+    width: 280px; 
+    height: auto; 
+    margin-top: 80px; 
+  }
+  
+  .cloud-inner-text { 
+    font-size: 1.45vw;
+    width: 80%;
+  }
+  
+  .cloud-1 { top: 12%; left: 2%; width: 155px; }
+  .cloud-2 { top: 12%; right: 2%; width: 155px; }
+  .cloud-3 { top: 54%; left: -2%; width: 145px; }
+  .cloud-4 { top: 54%; right: -2%; width: 145px; }
+
+  .faq-main-heading { font-size: 2rem; }
+  .faq-accordion-trigger { font-size: 1.1rem; }
+  .faq-icon-indicator { font-size: 1.4rem; }
+  .faq-accordion-body { padding: 0 25px 20px 25px; font-size: 0.95rem; }
+}
+
+
+/* ==========================================================================
+   4. DESKTOP VERSION (Screens 992px and up)
+   ========================================================================== */
+@media (min-width: 992px) {
+  .programs-section {
+    padding: 2rem 0;
+  }
+
+  .programs-main-title {
+    font-size: 2.75rem;
+  }
+
+  .programs-subtitle {
+    font-size: 1.25rem;
+  }
+
+  /* Exact custom border-frame proportions mapping your sample presentation */
+  .program-card {
+    border-radius: 24px;
+    border: 10px solid #fdba74;
+  }
+
+  .program-image-wrapper {
+    height: 400px;
+  }
+
+  .program-details-content {
+    padding: 3rem 3.5rem;
+  }
+
+  .program-card-title {
+    font-size: 2rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .program-card-description {
+    font-size: 1.15rem;
+    line-height: 1.6;
+  }
+
+  .programs-dots-controls {
+    gap: 16px;
+  }
+
+  .program-dot-btn {
+    width: 22px;
+    height: 22px;
+  }
+
+  /* Desktop Gradient Matching */
+  .happy-hero-wrapper {
+    background: linear-gradient(to bottom, #7bc1ed 0%, #FFFFFF 85%);
+  }
+  .happy-hero-title { font-size: 2.6rem; }
+  .happy-sun-img { top: -40px; right: 5%; width: 130px; height: 130px; }
+  .cloud-graphic-area { max-width: 800px; height: 420px; }
+  .happy-children-img { width: 390px; height: 250px; margin: 90px auto 0 auto; }
+  
+  .cloud-inner-text { font-size: 0.85rem; }
+
+  .cloud-1 { top: 12%; left: 4%; width: 200px; }
+  .cloud-2 { top: 12%; right: 4%; width: 200px; }
+  .cloud-3 { top: 52%; left: -3%; width: 190px; }
+  .cloud-4 { top: 52%; right: -3%; width: 190px; }
+
+  .faq-main-heading { font-size: 2.2rem; }
+  .faq-accordion-trigger { font-size: 1.15rem; }
+  .faq-icon-indicator { font-size: 1.5rem; }
+  .faq-accordion-body { padding: 0px 25px 22px 25px; font-size: 0.98rem; }
+}

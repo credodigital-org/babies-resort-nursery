@@ -1,0 +1,152 @@
+/* ==========================================================================
+   Hero.css - Enhanced Layout Scaling for Desktop & Mobile
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   GLOBAL HERO SECTION
+   -------------------------------------------------------------------------- */
+.custom-hero-section {
+  position: relative;
+  z-index: 1;
+  padding-bottom: 5rem !important; /* Extra room for large clouds on mobile */
+  background: linear-gradient(to bottom, #ffffff 0%, #8fc7f2 100%);
+}
+
+/* Typography */
+.hero-main-title {
+  color: #32627d;
+  line-height: 1.0;
+  font-size: 2.5rem;
+  font-family: Fredoka;
+  padding-bottom: 30px;
+}
+
+.hero-title-highlight {
+  color: #fb923c;
+}
+
+/* --- CLOUD BACKDROP SYSTEM (ENLARGED FOR MOBILE) --- */
+.hero-wave-1,
+.hero-wave,
+.hero-wave-3 {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  pointer-events: none;
+}
+
+.hero-wave-1 {
+  bottom: 50px; /* Elevated to match larger graphic structures */
+  z-index: 2;
+}
+
+.hero-wave {
+  bottom: -30px;
+  z-index: 3;
+}
+
+/* Stretches the cloud graphic larger on mobile viewports */
+.wave-bg-graphic {
+  width: 100%;
+  height: 180px; /* INCREASED: Cloud looks much bigger and more prominent on mobile */
+  object-fit: fill;
+}
+
+/* --------------------------------------------------------------------------
+   MOBILE LAYOUT (KEEP THIS VERSION)
+   -------------------------------------------------------------------------- */
+/* --- IMAGE CONTAINER (ENLARGED FOR MOBILE) --- */
+.image-blob-container {
+  position: relative;
+  width: 100%;
+  max-width: 300px; /* INCREASED: Enlarged kid size significantly on mobile */
+  aspect-ratio: 1/1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 5;
+  margin: 0 auto;
+}
+
+.hero-kid-img {
+  position: absolute;
+  padding-top: 100px;
+  bottom: -100px; /* Sinks her slightly into the larger mobile clouds */
+  width: 350px;
+  height: 650px;
+  object-fit: contain;
+  z-index: 6;
+}
+
+/* ==========================================================================
+   TABLET BREAKPOINT (768px to 991px)
+   ========================================================================= */
+@media (min-width: 768px) {
+  .custom-hero-section {
+    padding-bottom: 14rem !important;
+  }
+
+  .image-blob-container {
+    max-width: 480px;
+  }
+
+  .wave-bg-graphic {
+    height: 220px;
+  }
+}
+
+/* ==========================================================================
+   DESKTOP BREAKPOINT (992px and up)
+   ========================================================================== */
+@media (min-width: 992px) {
+  .custom-hero-section {
+    padding-bottom: 0 !important;
+    min-height: calc(100vh - 110px);
+    display: flex;
+    align-items: center;
+    overflow: visible; /* Prevent unwanted cropping */
+  }
+
+  .hero-main-title {
+    margin-top: -350px; /* Aligns title with top of section */
+    margin-left: 100px; /* Positions title to the left */
+    font-size: 4.0rem;
+  }
+
+  /* INCREASED: Expanded container to allow for a much larger graphic footprint */
+  .image-blob-container {
+    max-width: 800px; /* Increased from 600px */
+    margin: 0; /* Align perfectly like image: remove auto margins */
+    justify-content: flex-start; /* For left-alignment */
+  }
+
+  /* INCREASED: Scaled the child image up significantly */
+  .hero-kid-img {
+    position: absolute;
+    bottom: 70px; /* Slightly offset to anchor her beautifully with the clouds */
+    width: 900px; /* Increased from 650px */
+    right: -70px;
+    height: auto; /* Changed to auto to preserve original aspect ratio while scaling */
+    max-height: calc(100vh - 100px); /* Increased from 200px to allow taller display */
+    align-self: flex-start; /* Align image like in reference */
+  }
+
+  /* Positions the big clouds flawlessly on widescreen viewports */
+  .hero-wave-1 {
+    bottom: 75px;
+  }
+
+  .hero-wave {
+    bottom: -40px;
+  }
+  .hero-wave-3 {
+    bottom: -68px;
+  }
+
+  .wave-bg-graphic {
+    height: 260px; /* Deep, giant cloud presence for big desktop monitors */
+    object-fit: fill;
+  }
+}

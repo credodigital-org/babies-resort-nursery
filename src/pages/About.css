@@ -1,0 +1,503 @@
+/* ==========================================================================
+   About.css - Isolated & Responsive Layout System (with Core Values & Teachers)
+   ========================================================================== */
+
+/* ==========================================================================
+   1. GLOBAL / SHARED STYLES
+   ========================================================================== */
+
+/* --- ABOUT US BASE STYLES --- */
+.about-page-wrapper {
+  background-color: #ffffff;
+  width: 100%;
+  overflow-x: hidden;
+  padding-top: 1.5rem;
+}
+
+.about-section {
+  padding-left: 1.5rem;
+  padding-right: 1rem;
+}
+
+/* --- PLAYFUL HEADERS WITH DASHED UNDERLINE (MATCHES DESIGN EXACTLY) --- */
+.about-title-container,
+.core-values-title-container,
+.teachers-title-container {
+  display: inline-block;
+  position: relative;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.about-main-title,
+.core-values-title,
+.teachers-main-title {
+  color: #fb923c;                     /* Exact signature orange tone */
+  font-family: 'Fredoka', sans-serif; /* Playful rounded font */
+  font-weight: 700;
+  font-size: 2rem;                    /* Default mobile base size */
+  margin-bottom: 6px;                 /* Perfect gap between text and dashes */
+  text-transform: capitalize;
+  letter-spacing: 0.5px;
+  line-height: 1.2;
+}
+
+/* Thick, custom-spaced dashed underlines */
+.about-title-underline,
+.core-title-underline,
+.teachers-title-underline {
+  width: 100%;                        /* Spans exact text width */
+  height: 0;
+  border-bottom: 4px dashed #32627d;  /* Soft dark slate blue accent line */
+  margin: 0 auto;
+}
+
+.about-sub-title {
+  color: #000000;
+  font-weight: 700;
+  font-size: 1.25rem;
+  line-height: 1.4;
+}
+
+.about-content-body {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.about-text-paragraph,
+.teachers-text-paragraph {
+  color: #333333;
+  font-size: 1rem;
+  line-height: 1.7;
+  font-weight: 400;
+  text-align: center;
+}
+
+
+/* --- CORE VALUES BASE STYLES --- */
+.core-values-section {
+  position: relative;
+  background-color: #ffffff;
+  overflow: hidden;
+}
+
+.value-card {
+  border-radius: 20px;
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: none;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.value-card:hover {
+  transform: translateY(-5px);
+}
+
+/* White dashed ring around the round pictures */
+.avatar-wrapper {
+  border-radius: 50%;
+  border: 3px dashed rgba(255, 255, 255, 0.85);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+}
+
+.avatar-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  background-color: #ffffff;
+}
+
+.value-card-title {
+  font-family: 'Fredoka', sans-serif;
+  font-weight: 600;
+}
+
+.value-card-text {
+  font-weight: 500;
+  opacity: 0.95;
+  margin: 0 auto;
+}
+
+/* Card Background Color Classes */
+.card-pink { background-color: #f88a8a !important; }
+.card-orange { background-color: #fbb25a !important; }
+.card-green { background-color: #a4cf5c !important; }
+.card-blue { background-color: #29b6f6 !important; }
+
+/* Cloud Position (Yellow arrow) */
+.bottom-cloud-backdrop {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.cloud-img {
+  width: 100%;
+  height: auto;
+}
+
+
+/* --- TEACHERS BASE STYLES --- */
+.teachers-section {
+  background-color: #ffffff;
+  width: 100%;
+}
+
+.teachers-content-body {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.teacher-card {
+  background-color: #fbb25a !important; /* Pastel orange card backing */
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: none;
+  position: relative;
+}
+
+.teacher-avatar-wrapper {
+  border-radius: 50%;
+  border: 4px solid #fbb25a;          /* Fuses image border tone with card background color */
+  overflow: visible;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+}
+
+.teacher-avatar-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.teacher-card-name {
+  font-family: 'Fredoka', sans-serif;
+  font-weight: 600;
+  text-align: center;
+}
+
+.teacher-card-role {
+  font-weight: 500;
+  color: #333333;
+  opacity: 0.9;
+  text-align: center;
+}
+
+
+/* ==========================================================================
+   2. MOBILE RESPONSIVE BREAKPOINT (Default Styles Up to 767px)
+   ========================================================================== */
+@media (max-width: 767px) {
+  /* About Page Mobile rules */
+  .about-section {
+    padding-top: 1rem !important;
+    padding-bottom: 0.5rem !important;
+  }
+  
+  .about-text-paragraph {
+    font-size: 0.95rem; /* Slightly tighter reading text scale for small mobile viewports */
+    line-height: 1.6;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+
+  /* Titles & Underlines on Mobile */
+  .about-main-title,
+  .core-values-title,
+  .teachers-main-title {
+    font-size: 2rem;
+  }
+
+  .about-title-underline,
+  .core-title-underline,
+  .teachers-title-underline {
+    border-bottom-width: 3px; /* Slightly thinner dashes for cleaner presentation on small mobile screens */
+  }
+
+  /* Core Values Mobile rules */
+  .core-values-section {
+    padding: 4rem 0 6rem 0;
+  }
+
+  .value-card {
+    padding: 2rem 1.5rem;
+  }
+
+  .avatar-wrapper {
+    width: 140px;
+    height: 140px;
+    padding: 6px;
+    margin-bottom: 1.2rem;
+  }
+
+  .value-card-title {
+    font-size: 1.35rem;
+    margin-bottom: 1rem;
+  }
+
+  .value-card-text {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    max-width: 95%;
+  }
+
+  .bottom-cloud-backdrop {
+    width: 150px;
+    bottom: 25px;
+  }
+
+  /* Teachers Mobile rules */
+  .teachers-section {
+    padding: 3rem 0;
+  }
+
+  .teachers-text-paragraph {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    max-width: 100%;
+    padding: 0 1rem;
+  }
+
+  .teacher-card {
+    margin-top: 80px;                 /* Pull down space for hanging circular picture avatars */
+    padding: 90px 1.5rem 2rem 1.5rem;
+  }
+
+  .teacher-avatar-wrapper {
+    width: 160px;
+    height: 160px;
+    position: absolute;
+    top: -80px;                       /* Hangs circular image halfway over top of card */
+  }
+
+  .teacher-card-name {
+    font-size: 1.4rem;
+    margin-bottom: 0.4rem;
+  }
+
+  .teacher-card-role {
+    font-size: 1rem;
+  }
+}
+
+
+/* ==========================================================================
+   3. TABLET RESPONSIVE BREAKPOINT (768px to 991px)
+   ========================================================================== */
+@media (min-width: 768px) {
+  /* About Page Tablet rules */
+  .about-section {
+    padding-top: 2.5rem !important;
+    padding-bottom: 1.5rem !important;
+  }
+
+  /* Titles & Underlines on Tablet */
+  .about-main-title {
+    font-size: 2.5rem;
+  }
+
+  .core-values-title {
+    font-size: 2.2rem;
+  }
+
+  .about-title-underline,
+  .core-title-underline,
+  .teachers-title-underline {
+    border-bottom-width: 4px;
+  }
+
+  .about-sub-title {
+    font-size: 1.5rem;
+  }
+
+  .about-text-paragraph {
+    font-size: 1.05rem;
+    line-height: 1.75;
+  }
+
+  /* Core Values Tablet rules */
+  .core-values-section {
+    padding: 5rem 0 7rem 0;
+  }
+
+  .value-card {
+    padding: 2.2rem 1.8rem;
+  }
+
+  .avatar-wrapper {
+    width: 150px;
+    height: 150px;
+    padding: 8px;
+    margin-bottom: 1.3rem;
+  }
+
+  .value-card-title {
+    font-size: 1.45rem;
+    margin-bottom: 1.1rem;
+  }
+
+  .value-card-text {
+    font-size: 0.98rem;
+    line-height: 1.55;
+    max-width: 90%;
+  }
+
+  .bottom-cloud-backdrop {
+    width: 150px;
+    bottom: 25px;
+  }
+
+  /* Teachers Tablet rules */
+  .teachers-section {
+    padding: 4.5rem 0;
+  }
+
+  .teachers-main-title {
+    font-size: 2.3rem;
+  }
+
+  .teachers-text-paragraph {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    max-width: 650px;
+    margin: 0 auto;
+  }
+
+  .teacher-card {
+    margin-top: 90px;
+    padding: 100px 1.2rem 2.2rem 1.2rem;
+  }
+
+  .teacher-avatar-wrapper {
+    width: 180px;
+    height: 180px;
+    position: absolute;
+    top: -90px;
+  }
+
+  .teacher-card-name {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .teacher-card-role {
+    font-size: 1.05rem;
+  }
+}
+
+
+/* ==========================================================================
+   4. DESKTOP RESPONSIVE BREAKPOINT (992px and up)
+   ========================================================================== */
+@media (min-width: 992px) {
+  /* About Page Desktop rules */
+  .about-section {
+    padding-top: 1rem !important;
+    padding-bottom: 0.5rem !important;
+  }
+
+  /* Titles & Underlines on Desktop */
+  .about-main-title {
+    font-size: 2.75rem;
+  }
+
+  .core-values-title {
+    font-size: 2.5rem;
+  }
+
+  .about-sub-title {
+    font-size: 1.65rem;
+  }
+
+  /* Restricts line widths so wide desktop displays don't stretch lines too long to read comfortably */
+  .about-content-body {
+    max-width: 850px;
+  }
+
+  .about-text-paragraph {
+    font-size: 1.15rem;
+    line-height: 1.8;
+  }
+
+  /* Core Values Desktop rules */
+  .core-values-section {
+    padding: 3rem 0 9rem 0;
+  }
+
+  .value-card {
+    padding: 2.5rem 2rem;
+  }
+
+  .avatar-wrapper {
+    width: 170px;
+    height: 170px;
+    padding: 8px;
+    margin-bottom: 1.5rem;
+  }
+
+  .value-card-title {
+    font-size: 1.6rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .value-card-text {
+    font-size: 1rem;
+    line-height: 1.6;
+    max-width: 90%;
+  }
+
+  .bottom-cloud-backdrop {
+    width: 260px;
+    bottom: 35px;
+  }
+
+  /* Teachers Desktop rules */
+  .teachers-section {
+    padding: 2rem 0 6rem 0;
+  }
+
+  .teachers-main-title {
+    font-size: 2.6rem;
+  }
+
+  .teachers-text-paragraph {
+    font-size: 1.15rem;
+    line-height: 1.75;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .teacher-card {
+    margin-top: 110px;
+    padding: 120px 2rem 2.5rem 2rem;
+  }
+
+  .teacher-avatar-wrapper {
+    width: 220px;
+    height: 220px;
+    position: absolute;
+    top: -110px;
+  }
+
+  .teacher-card-name {
+    font-size: 1.65rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .teacher-card-role {
+    font-size: 1.1rem;
+  }
+}

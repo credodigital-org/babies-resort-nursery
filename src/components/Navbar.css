@@ -1,0 +1,69 @@
+/* ==========================================================================
+   Navbar.css - Transparent Overlay
+   ========================================================================== */
+.custom-navbar {
+  z-index: 10;
+  position: relative;
+  background: transparent !important; /* Lets the App background show through */
+}
+
+.navbar-inner-container {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.nav-spacer {
+  width: 42px;
+}
+
+.custom-navbar-brand {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
+  flex-basis: 0;
+}
+
+.logo-graphic {
+  height: 150px; /* Slightly taller to match your mockup image proportions */
+  width: 150px;
+  object-fit: contain;
+}
+
+.custom-toggler {
+  width: 42px;
+  text-align: right;
+  padding: 0;
+}
+
+.navbar-nav .nav-link,
+.mobile-nav-drawer .nav-link {
+  font-size: 1.15rem;
+}
+
+@media (min-width: 992px) {
+  .nav-spacer {
+    display: none !important;
+  }
+  .custom-navbar-brand {
+    justify-content: flex-start !important;
+    flex-grow: 0 !important;
+    flex-basis: auto !important;
+  }
+  .navbar-nav .nav-link {
+    font-size: 1.25rem;
+  }
+}
+
+.mobile-nav-drawer {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: #ffffff;
+  padding: 1rem 0;
+  border-bottom: 1px solid #dee2e6;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+  z-index: 1000;
+}
