@@ -55,8 +55,8 @@ export default function About() {
       </section>
 
       {/* Core Values */}
-      <section class="core-values-section">
-  <div class="container text-center">
+      <section className="core-values-section">
+  <div className="container text-center">
     
     {/* <!-- Title Header --> */}
     <div className="core-values-title-container mb-4 text-center">
@@ -64,59 +64,59 @@ export default function About() {
   <div className="core-title-underline"></div>
 </div>
     
-    <div class="row g-4 justify-content-center">
+    <div className="row g-4 justify-content-center">
       
       {/* <!-- Card 1: Care & Compassion --> */}
-      <div class="col-12 col-md-6">
-        <div class="value-card card-pink text-white h-100">
-          <div class="avatar-wrapper">
+      <div className="col-12 col-md-6">
+        <div className="value-card card-pink text-white h-100">
+          <div className="avatar-wrapper">
             {/* <!-- Cartoon Image Space 1 --> */}
-            <img src={core1} alt="Care & Compassion" class="avatar-img" />
+            <img src={core1} alt="Care & Compassion" className="avatar-img" />
           </div>
-          <h3 class="value-card-title">Care & Compassion</h3>
-          <p class="value-card-text">
+          <h3 className="value-card-title">Care & Compassion</h3>
+          <p className="value-card-text">
             Providing Every Child With Love, Care, And Individual Attention In A Safe And Supportive Learning Environment
           </p>
         </div>
       </div>
 
       {/* <!-- Card 2: Creativity & Exploration --> */}
-      <div class="col-12 col-md-6">
-        <div class="value-card card-orange text-white h-100">
-          <div class="avatar-wrapper">
+      <div className="col-12 col-md-6">
+        <div className="value-card card-orange text-white h-100">
+          <div className="avatar-wrapper">
             {/* <!-- Cartoon Image Space 2 --> */}
-            <img src={core2} alt="Creativity & Exploration" class="avatar-img" />
+            <img src={core2} alt="Creativity & Exploration" className="avatar-img" />
           </div>
-          <h3 class="value-card-title">Creativity & Exploration</h3>
-          <p class="value-card-text">
+          <h3 className="value-card-title">Creativity & Exploration</h3>
+          <p className="value-card-text">
             Encouraging Creativity, Curiosity, And Joyful Learning Experiences Through Fun And Engaging Activities.
           </p>
         </div>
       </div>
 
       {/* <!-- Card 3: Safety & Trust --> */}
-      <div class="col-12 col-md-6">
-        <div class="value-card card-green text-white h-100">
-          <div class="avatar-wrapper">
+      <div className="col-12 col-md-6">
+        <div className="value-card card-green text-white h-100">
+          <div className="avatar-wrapper">
             {/* <!-- Cartoon Image Space 3 --> */}
-            <img src={core3} alt="Safety & Trust" class="avatar-img" />
+            <img src={core3} alt="Safety & Trust" className="avatar-img" />
           </div>
-          <h3 class="value-card-title">Safety & Trust</h3>
-          <p class="value-card-text">
+          <h3 className="value-card-title">Safety & Trust</h3>
+          <p className="value-card-text">
             Maintaining A Secure And Child-Friendly Environment For All Children.
           </p>
         </div>
       </div>
 
       {/* <!-- Card 4: Experienced Teachers --> */}
-      <div class="col-12 col-md-6">
-        <div class="value-card card-blue text-white h-100">
-          <div class="avatar-wrapper">
+      <div className="col-12 col-md-6">
+        <div className="value-card card-blue text-white h-100">
+          <div className="avatar-wrapper">
             {/* <!-- Cartoon Image Space 4 --> */}
-            <img src={core4} alt="Experienced Teachers" class="avatar-img" />
+            <img src={core4} alt="Experienced Teachers" className="avatar-img" />
           </div>
-          <h3 class="value-card-title">Experienced Teachers</h3>
-          <p class="value-card-text">
+          <h3 className="value-card-title">Experienced Teachers</h3>
+          <p className="value-card-text">
             Qualified And Caring Teachers Who Support Every Child's Learning And Growth With Patience And Dedication
           </p>
         </div>
@@ -126,61 +126,61 @@ export default function About() {
   </div>
 
   {/* <!-- Cloud Image Backdrop (Yellow Arrow Indicator) --> */}
-  <div class="bottom-cloud-backdrop">
-    <img src={corecloud} alt="Decorative Cloud" class="cloud-img" />
+  <div className="bottom-cloud-backdrop">
+    <img src={corecloud} alt="Decorative Cloud" className="cloud-img" />
   </div>
 </section>
 
 {/* Teachers */}
-<section class="teachers-section">
-  <div class="container text-center">
+<section className="teachers-section">
+  <div className="container text-center">
     
     {/* <!-- Title Header System (Matches Core Values & About layout style exactly) --> */}
-    <div class="teachers-title-container mb-3">
-      <h2 class="teachers-main-title">Our Dedicated Teachers</h2>
-      <div class="teachers-title-underline"></div>
+    <div className="teachers-title-container mb-3">
+      <h2 className="teachers-main-title">Our Dedicated Teachers</h2>
+      <div className="teachers-title-underline"></div>
     </div>
     
     {/* <!-- Section Description Paragraph --> */}
-    <div class="teachers-content-body mb-5">
-      <p class="teachers-text-paragraph">
+    <div className="teachers-content-body mb-5">
+      <p className="teachers-text-paragraph">
         Meet Our Caring And Experienced Teachers Who Are Dedicated To Supporting Every Child's Learning, Creativity, And Overall Development.
       </p>
     </div>
     
     {/* <!-- Teachers Grid System --> */}
-    <div class="row g-4 justify-content-center">
+    <div className="row g-4 justify-content-center">
       
       {/* <!-- Teacher Card 1: Naseera Ali --> */}
-      <div class="col-12 col-md-4">
-        <div class="teacher-card text-white">
-          <div class="teacher-avatar-wrapper">
-            <img src={naseera} alt="Naseera Ali" class="teacher-avatar-img" />
+      <div className="col-12 col-md-4">
+        <div className="teacher-card text-white">
+          <div className="teacher-avatar-wrapper">
+            <img src={naseera} alt="Naseera Ali" className="teacher-avatar-img" />
           </div>
-          <h3 class="teacher-card-name">Naseera Ali</h3>
-          <p class="teacher-card-role">Nursery Manager</p>
+          <h3 className="teacher-card-name">Naseera Ali</h3>
+          <p className="teacher-card-role">Nursery Manager</p>
         </div>
       </div>
 
       {/* <!-- Teacher Card 2: Amina Rahman --> */}
-      <div class="col-12 col-md-4">
-        <div class="teacher-card text-white">
-          <div class="teacher-avatar-wrapper">
-            <img src={amina} alt="Amina Rahman" class="teacher-avatar-img" />
+      <div className="col-12 col-md-4">
+        <div className="teacher-card text-white">
+          <div className="teacher-avatar-wrapper">
+            <img src={amina} alt="Amina Rahman" className="teacher-avatar-img" />
           </div>
-          <h3 class="teacher-card-name">Amina Rahman</h3>
-          <p class="teacher-card-role">Administrator</p>
+          <h3 className="teacher-card-name">Amina Rahman</h3>
+          <p className="teacher-card-role">Administrator</p>
         </div>
       </div>
 
       {/* <!-- Teacher Card 3: Rania Ahmed --> */}
-      <div class="col-12 col-md-4">
-        <div class="teacher-card text-white">
-          <div class="teacher-avatar-wrapper">
-            <img src={rania} alt="Rania Ahmed" class="teacher-avatar-img" />
+      <div className="col-12 col-md-4">
+        <div className="teacher-card text-white">
+          <div className="teacher-avatar-wrapper">
+            <img src={rania} alt="Rania Ahmed" className="teacher-avatar-img" />
           </div>
-          <h3 class="teacher-card-name">Rania Ahmed</h3>
-          <p class="teacher-card-role">Activity Coordinator</p>
+          <h3 className="teacher-card-name">Rania Ahmed</h3>
+          <p className="teacher-card-role">Activity Coordinator</p>
         </div>
       </div>
 

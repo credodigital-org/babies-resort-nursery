@@ -1,0 +1,329 @@
+/* ==========================================================================
+   Testimonials.css - Absolute Layer Architecture & Slidable Engine
+   ========================================================================== */
+
+.testimonials-section {
+  width: 100%;
+  background-color: #B4E2FF; /* Precise background sky blue matching hero */
+  padding: 100px 0 140px 0;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.testimonials-interactive-container {
+  position: relative;
+  z-index: 10;
+}
+
+/* Base Top & Bottom Curve Layout Rules */
+.curve-shape {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: auto;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.top-curve {
+  top: -2px;
+}
+
+.bottom-curve-container {
+  position: absolute;
+  bottom: -40px;
+  left: 0;
+  width: 100%;
+  height: auto;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.bottom-curve {
+  position: relative;
+  width: 100%;
+  display: block;
+}
+
+/* Paper Arrow Graphic Asset Overlaying Bottom Curve */
+.paper-arrow-overlay-img {
+  position: absolute;
+  bottom: 10%;
+  left: 15%;
+  width: 160px;
+  height: auto;
+  z-index: 5;
+}
+
+/* Playful Floating Giraffe Asset Positioning */
+.floating-giraffe-img {
+  position: absolute;
+  top: 40px;
+  right: 12%;
+  width: 90px;
+  height: auto;
+  z-index: 4;
+}
+
+/* Playful Dashed Header System styles */
+.testimonials-title-container {
+  display: inline-block;
+  position: relative;
+}
+
+.testimonials-main-title {
+  color: #fb923c;
+  font-family: 'Fredoka', sans-serif;
+  font-weight: 700;
+  margin-bottom: 6px;
+  letter-spacing: 0.5px;
+}
+
+.testimonials-title-underline {
+  width: 100%;
+  height: 0;
+  border-bottom: 4px dashed #32627d;
+  margin: 0 auto;
+}
+
+/* Slider Track Window Base Proportions */
+.carousel-viewports-box {
+  width: 100%;
+  max-width: 780px;
+  height: 380px;
+}
+
+.testimonial-slider-track {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+/* Precise CSS Position Translation for Fluid Component Slide Effects */
+.testimonial-card-item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  text-align: center;
+  transition: all 0.45s ease-in-out;
+  pointer-events: none;
+}
+
+.testimonial-card-item.activeSlide {
+  opacity: 1;
+  transform: translateX(0);
+  pointer-events: auto;
+}
+
+.testimonial-card-item.lastSlide {
+  transform: translateX(-100%);
+}
+
+.testimonial-card-item.nextSlide {
+  transform: translateX(100%);
+}
+
+/* Profile Picture & Typography Card Settings */
+.profile-circle-frame {
+  width: 135px;
+  height: 135px;
+  border-radius: 50%;
+  border: 6px solid #FFFFFF;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+  background-color: #FFFFFF;
+  margin-bottom: 20px;
+}
+
+.profile-display-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.parent-profile-name {
+  font-family: sans-serif;
+  font-weight: 700;
+  font-size: 1.35rem;
+  color: #000000;
+  margin-bottom: 15px;
+}
+
+.parent-testimonial-quote {
+  font-family: sans-serif;
+  font-weight: 400;
+  font-size: 1.12rem;
+  color: #333333;
+  line-height: 1.6;
+  max-width: 640px;
+  width: 85%;
+}
+
+/* Round Arrow Circular Control Buttons System */
+.nav-arrow-btn {
+  position: absolute;
+  top: 75px; /* Centers cleanly matching the height alignment of the profile circular graphic */
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  border: none;
+  background-color: #38bdf8; /* Deep sky cyan-blue tone */
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.2s;
+  z-index: 20;
+  box-shadow: 0 4px 10px rgba(56, 189, 248, 0.2);
+}
+
+.nav-arrow-btn svg {
+  width: 24px;
+  height: 24px;
+}
+
+.nav-arrow-btn:hover {
+  background-color: #0ea5e9;
+  transform: scale(1.05);
+}
+
+.prev-btn { left: 4%; }
+.next-btn { right: 4%; }
+
+
+/* ==========================================================================
+   3. TABLET ADAPTIVE OVERRIDES (768px to 991px)
+   ========================================================================== */
+@media (max-width: 991px) {
+  .testimonials-section {
+    padding: 80px 0 110px 0;
+  }
+  
+  .floating-giraffe-img {
+    width: 75px;
+    top: 30px;
+    right: 6%;
+  }
+
+  .carousel-viewports-box {
+    max-width: 620px;
+    height: 360px;
+  }
+
+  .parent-testimonial-quote {
+    font-size: 1rem;
+    width: 80%;
+  }
+
+  .paper-arrow-overlay-img {
+    width: 120px;
+    left: 8%;
+  }
+}
+
+/* ==========================================================================
+   4. MOBILE ADAPTIVE OVERRIDES (Up to 767px)
+   ========================================================================== */
+@media (max-width: 767px) {
+  .testimonials-section {
+    padding: 70px 0 80px 0;
+    top:-40px;
+  }
+  .curve-shape{
+    top: -25px;
+  }
+
+  .testimonials-main-title {
+    font-size: 1.8rem;
+  }
+
+  .floating-giraffe-img {
+    width: 55px;
+    top: 15px;
+    right: 4%;
+  }
+
+  .carousel-viewports-box {
+    max-width: 100%;
+    height: 380px;
+  }
+
+  .profile-circle-frame {
+    width: 110px;
+    height: 110px;
+    border-width: 4px;
+  }
+
+  .parent-profile-name {
+    font-size: 1.15rem;
+  }
+
+  .parent-testimonial-quote {
+    font-size: 0.92rem;
+    line-height: 1.5;
+    width: 78%;
+  }
+
+  /* Reposition arrows cleanly inside narrow viewports so they don't clip off-screen */
+  .nav-arrow-btn {
+    width: 42px;
+    height: 42px;
+    top: 40px;
+  }
+  
+  .nav-arrow-btn svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .prev-btn { left: 2%; }
+  .next-btn { right: 2%; }
+
+  .paper-arrow-overlay-img {
+    width: 85px;
+    left: 5%;
+    bottom: 8%;
+  }
+}
+
+/* ==========================================================================
+   5. DESKTOP ADAPTIVE OVERRIDES (992px and up)
+   ========================================================================== */
+@media (min-width: 992px) {
+  .curve-shape {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.top-curve {
+  top: -90px;
+}
+.testimonials-section {
+    padding-top: 150px;
+}
+
+.bottom-curve-container {
+  position: absolute;
+  bottom: -70px;
+  left: 0;
+  width: 100%;
+  height: auto;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.bottom-curve {
+  position: relative;
+  width: 100%;
+  display: block;
+}
+
+}
