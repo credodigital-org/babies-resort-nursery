@@ -1,19 +1,23 @@
-import React, { useEffect, useState } from 'react';
+import * as React from 'react'; 
 import { BrowserRouter as Router, Routes, Route, useLocation, Navigate } from 'react-router-dom';
 
 // Import components & pages
 import Navbar from './components/Navbar'; 
 import Hero from './pages/Hero';     
 import About from './pages/About';   
-import Programs from './pages/Programs'; // Make sure to import these
-import Gallery from './pages/Gallery';   // or replace with your paths
+import Programs from './pages/Programs'; 
+import Testimonials from './components/Testimonials'; 
+import Gallery from './pages/Gallery';   
 import Contact from './pages/Contact';   
+import Footer from './components/Footer';   
+
 
 // Custom hook to detect if the viewport is Desktop (>= 992px)
 function useIsDesktop() {
-  const [isDesktop, setIsDesktop] = useState(window.innerWidth >= 992);
+  // Fixed: explicitly prefixed hooks with React.
+  const [isDesktop, setIsDesktop] = React.useState(window.innerWidth >= 992);
 
-  useEffect(() => {
+  React.useEffect(() => {
     const handleResize = () => {
       setIsDesktop(window.innerWidth >= 992);
     };
@@ -25,17 +29,18 @@ function useIsDesktop() {
   return isDesktop;
 }
 
-// Handles smooth scrolling ONLY on Mobile & Tablet (where all sections live on one page)
+// Handles smooth scrolling ONLY on Mobile & Tablet
 function ScrollToSection({ isDesktop }) {
   const { pathname } = useLocation();
 
-  useEffect(() => {
-    if (isDesktop) return; // Disable inline scrolling on desktop pages
+  // Fixed: explicitly prefixed hooks with React.
+  React.useEffect(() => {
+    if (isDesktop) return; 
 
-    // Map the pathname to the correct element ID on the single-page layout
     let targetId = 'hero';
     if (pathname === '/about') targetId = 'about';
     else if (pathname === '/programs') targetId = 'programs';
+    else if (pathname === '/testimonials') targetId = 'testimonials'; 
     else if (pathname === '/gallery') targetId = 'gallery';
     else if (pathname === '/contact') targetId = 'contact';
 
@@ -68,6 +73,10 @@ function MobileTabletLayout() {
         <Programs />
       </div>
 
+      <div id="testimonials">
+        <Testimonials />
+      </div>
+
       <div id="contact">
         <Contact />
       </div>
@@ -91,10 +100,10 @@ export default function App() {
         {isDesktop ? (
           /* ================= DESKTOP ROUTES (Isolated Pages) ================= */
           <Routes>
-            <Route path="/" element={<><Hero /><About /></>} />
+            <Route path="/" element={<><Hero /><About /><Testimonials /></>} />
             <Route path="/about" element={<About />} />
-            <Route path="/programs" element={<Programs />} />
             <Route path="/gallery" element={<Gallery />} />
+            <Route path="/programs" element={<Programs />} />
             <Route path="/contact" element={<Contact />} />
             {/* Redirect any missing paths back home */}
             <Route path="*" element={<Navigate to="/" replace />} />
@@ -106,6 +115,7 @@ export default function App() {
             <Route path="*" element={<MobileTabletLayout />} />
           </Routes>
         )}
+        <Footer />
       </div>
     </Router>
   );

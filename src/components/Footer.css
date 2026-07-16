@@ -1,0 +1,288 @@
+/* ==========================================================================
+   1. DESKTOP SYSTEM PLATFORM STYLES (992px and up)
+   ========================================================================== */
+.main-footer-wrapper {
+  width: 100%;
+  background-color: #FFFFFF;
+  border-top: 1px solid #f3f4f6;
+  padding: 48px 0;
+}
+
+/* Header & Typography Branding Architecture */
+.footer-brand-logo-box {
+  width: 150px; /* Synchronized with image sizing bound requirements */
+  height: auto;
+  margin: 0 auto;
+}
+
+.footer-logo-img {
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+  display: block;
+}
+
+.footer-brand-title-en {
+  font-family: sans-serif;
+  font-weight: 800;
+  font-size: 1.35rem;
+  color: #000000;
+  margin-bottom: 2px;
+}
+
+.footer-brand-title-ar {
+  font-family: sans-serif;
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: #000000;
+  margin-bottom: 0;
+}
+
+.footer-vision-text {
+  font-family: sans-serif;
+  font-weight: 500;
+  font-size: 1.05rem;
+  color: #4b5563;
+  line-height: 1.6;
+  max-width: 650px;
+}
+
+/* Middle Decorative Title Grid Block */
+.footer-section-title {
+  color: #fb923c; /* Mockup warm pastel theme signature orange */
+  font-family: 'Fredoka', sans-serif;
+  font-weight: 700;
+  font-size: 2.1rem;
+  letter-spacing: 0.5px;
+}
+
+/* --- HORIZONTAL DESKTOP STRUCTURAL GRID --- */
+.footer-interactive-row {
+  max-width: 940px;
+  margin-top: 40px;
+  display: flex !important;
+  flex-direction: row !important; /* Forces side-by-side split configuration */
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Left Communication Component Profiles */
+.contact-links-column {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  text-align: left;
+  align-items: flex-start;
+}
+
+.contact-item-link {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  text-decoration: none !important;
+  transition: opacity 0.2s;
+}
+
+.contact-item-link:hover {
+  opacity: 0.8;
+}
+
+.contact-icon-wrapper {
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+}
+
+/* Perfect alignment colors pulled from mockup image nodes */
+.call-color { color: #38bdf8; }
+.mail-color { color: #38bdf8; }
+.location-color { color: #38bdf8; }
+
+.contact-item-text {
+  font-family: sans-serif;
+  font-weight: 500;
+  font-size: 1.25rem;
+  color: #374151;
+}
+
+/* Right Social Interaction Systems */
+.social-links-column {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; /* Snaps social group right to pin the desktop layout */
+  gap: 24px;
+}
+
+.standard-socials {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.social-action-anchor {
+  font-size: 1.9rem;
+  text-decoration: none !important;
+  transition: transform 0.2s, opacity 0.2s;
+  display: inline-block;
+}
+
+.social-action-anchor.orange-tint {
+  color: #fdba74; /* Warm pastel vector orange from mock */
+}
+
+.social-action-anchor:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+.whatsapp-floating-badge {
+  font-size: 2.8rem;
+  color: #22c55e; /* Bright accent Whatsapp dynamic green frame */
+  text-decoration: none !important;
+  transition: transform 0.2s;
+  display: inline-block;
+}
+
+.whatsapp-floating-badge:hover {
+  transform: scale(1.08);
+}
+
+/* Bottom Legal Matrix Styling */
+.footer-copyright-row {
+  border-top: 1px solid #e5e7eb;
+}
+
+.copyright-text {
+  font-family: sans-serif;
+  font-weight: 600;
+  font-size: 1.15rem;
+  color: #374151;
+}
+
+/* ==========================================================================
+   2. TABLET ADAPTIVE PROFILE VIEWPORTS (768px to 991px)
+   ========================================================================= */
+@media (max-width: 991px) and (min-width: 768px) {
+  .footer-interactive-row {
+    flex-direction: column !important; /* Safely collapses to responsive vertical layout */
+    gap: 32px !important;
+  }
+  
+  .contact-links-column {
+    align-items: center !important;
+    text-align: center;
+    width: 100%;
+  }
+
+  .social-links-column {
+    align-items: center !important;
+    width: 100%;
+  }
+
+  .contact-item-text {
+    font-size: 1.1rem;
+  }
+  
+  .social-action-anchor {
+    font-size: 1.65rem;
+  }
+  
+  .whatsapp-floating-badge {
+    font-size: 2.5rem;
+  }
+}
+
+/* ==========================================================================
+   3. MOBILE PHONE ADAPTIVE STACKS (Up to 767px)
+   ========================================================================= */
+@media (max-width: 767px) {
+  .footer-interactive-row {
+    flex-direction: column !important;
+    gap: 32px !important;
+  }
+
+  .footer-brand-logo-box {
+    width: 120px;
+  }
+  
+  .footer-logo-img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .footer-brand-title-en { font-size: 1.2rem; }
+  .footer-brand-title-ar { font-size: 1.1rem; }
+  
+  .footer-vision-text {
+    font-size: 0.9rem;
+    width: 95%;
+    line-height: 1.5;
+  }
+
+  .footer-section-title {
+    font-size: 1.75rem;
+  }
+
+  /* Center align list components on phone profiles */
+  .contact-links-column {
+    align-items: center !important;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  .contact-item-link {
+    flex-direction: column;
+    gap: 8px !important;
+  }
+
+  .contact-item-text {
+    font-size: 1.05rem;
+  }
+
+  .social-links-column {
+    align-items: center !important;
+    width: 100%;
+    margin-top: 10px;
+    gap: 20px !important;
+  }
+
+  .social-action-anchor {
+    font-size: 1.5rem;
+  }
+
+  .whatsapp-floating-badge {
+    font-size: 2.3rem;
+  }
+
+  .copyright-text {
+    font-size: 0.95rem;
+    padding: 0 10px;
+  }
+}
+
+/* ==========================================================================
+   4. APPENDED RULES FOR INTERACTIVE CLICKABLE IMAGE ASSETS
+   ========================================================================== */
+.footer-custom-icon {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  display: block;
+}
+
+.footer-custom-social-icon {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+  display: block;
+}
+
+.footer-custom-whatsapp {
+  width: 54px;
+  height: 54px;
+  object-fit: contain;
+  display: block;
+}

@@ -137,7 +137,7 @@
   background-color: transparent;
   display: block;
   position: relative;
-  z-index: 2;
+  z-index: 5;
 }
 
 /* --- CLOUD IMAGE OVERLAY SYSTEM --- */
@@ -146,7 +146,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 3;
+  z-index: 2;
 }
 
 .cloud-bg-img {
@@ -306,8 +306,8 @@
 
   .cloud-1 { top: -30%; left: 0%; width: 130px; }
   .cloud-2 { top: -30%; right: 0%; width: 130px; }
-  .cloud-3 { top: 40%; left: -4%; width: 130px; }
-  .cloud-4 { top: 40%; right: -4%; width: 130px; }
+  .cloud-3 { top: 15%; left: -8%; width: 130px; }
+  .cloud-4 { top: 10%; right: -8%; width: 130px; }
   
   .faq-main-heading { font-size: 1.7rem; }
   .faq-accordion-trigger { font-size: 1rem; padding: 14px 18px; }
@@ -387,10 +387,10 @@
     width: 80%;
   }
   
-  .cloud-1 { top: 12%; left: 2%; width: 155px; }
-  .cloud-2 { top: 12%; right: 2%; width: 155px; }
-  .cloud-3 { top: 54%; left: -2%; width: 145px; }
-  .cloud-4 { top: 54%; right: -2%; width: 145px; }
+  .cloud-1 { top: -30%; left: 0%; width: 130px; }
+  .cloud-2 { top: -30%; left: 0%; width: 130px; }
+  .cloud-3 { top: 40%; left: -4%; width: 130px; }
+  .cloud-4 { top: 40%; left: -4%; width: 130px; }
 
   .faq-main-heading { font-size: 2rem; }
   .faq-accordion-trigger { font-size: 1.1rem; }
@@ -453,16 +453,16 @@
     background: linear-gradient(to bottom, #7bc1ed 0%, #FFFFFF 85%);
   }
   .happy-hero-title { font-size: 2.6rem; }
-  .happy-sun-img { top: -40px; right: 5%; width: 130px; height: 130px; }
+  .happy-sun-img { top: -80px; right: 5%; width: 130px; height: 130px; }
   .cloud-graphic-area { max-width: 800px; height: 420px; }
-  .happy-children-img { width: 390px; height: 250px; margin: 90px auto 0 auto; }
+  .happy-children-img { width: 450px; height: 300px; margin: 90px auto 0 auto; }
   
   .cloud-inner-text { font-size: 0.85rem; }
 
-  .cloud-1 { top: 12%; left: 4%; width: 200px; }
-  .cloud-2 { top: 12%; right: 4%; width: 200px; }
-  .cloud-3 { top: 52%; left: -3%; width: 190px; }
-  .cloud-4 { top: 52%; right: -3%; width: 190px; }
+  .cloud-1 { top: -20%; left: 0%; width: 250px; }
+  .cloud-2 { top: -20%; left: 60%; width: 250px; }
+  .cloud-3 { top: 30%; left: -2%; width: 250px; }
+  .cloud-4 { top: 20%; left: 70%; width: 250px; }
 
   .faq-main-heading { font-size: 2.2rem; }
   .faq-accordion-trigger { font-size: 1.15rem; }

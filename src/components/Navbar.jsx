@@ -36,11 +36,11 @@ export default function Navbar() {
 
         {/* DESKTOP LINKS LAYOUT */}
         <div className="collapse navbar-collapse fw-bold justify-content-center" id="navbarNav">
-          <div className="navbar-nav ms-auto">
+          <div className="navbar-nav ms-auto gap-4">
           <Link className="nav-link" to="/">Home</Link>
           <Link className="nav-link" to="/gallery">Gallery</Link>
           <Link className="nav-link" to="/programs">Programs</Link>
-          {/* <Link className="nav-link" to="/contact">Contact</Link> */}
+          <Link className="nav-link" to="/contact">Contact Us</Link>
         </div>
         </div>
       </div>
