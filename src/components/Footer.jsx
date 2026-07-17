@@ -48,7 +48,7 @@ export default function Footer() {
               <div className="contact-icon-wrapper">
                 <img src={phoneIcon} alt="Phone" className="footer-custom-icon" />
               </div>
-              <span className="contact-item-text">+971 50 123 4567</span>
+              <span className="contact-item-text">+971 54 888 8421</span>
             </a>
 
             <a href="mailto:info@babiesresortnursery.com" className="contact-item-link d-flex align-items-center gap-3">
@@ -80,10 +80,10 @@ export default function Footer() {
               <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="social-action-anchor">
                 <img src={linkedinIcon} alt="LinkedIn" className="footer-custom-social-icon" />
               </a>
-              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="social-action-anchor">
+              <a href="https://www.facebook.com/share/18yfyERUpB/" target="_blank" rel="noopener noreferrer" className="social-action-anchor">
                 <img src={facebookIcon} alt="Facebook" className="footer-custom-social-icon" />
               </a>
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="social-action-anchor">
+              <a href="https://www.instagram.com/babies.resort.ae?igsh=Nm03YXZtbW9qb240" target="_blank" rel="noopener noreferrer" className="social-action-anchor">
                 <img src={instagramIcon} alt="Instagram" className="footer-custom-social-icon" />
               </a>
               <a href="https://x.com" target="_blank" rel="noopener noreferrer" className="social-action-anchor">
@@ -92,7 +92,7 @@ export default function Footer() {
             </div>
 
             {/* Floating Highlight Chat Asset (WhatsApp Badge layout) */}
-            <a href="https://wa.me/971501234567" target="_blank" rel="noopener noreferrer" className="whatsapp-floating-badge">
+            <a href="https://wa.me/971548888421" target="_blank" rel="noopener noreferrer" className="whatsapp-floating-badge">
               <img src={whatsappIcon} alt="WhatsApp" className="footer-custom-whatsapp" />
             </a>
 
@@ -101,9 +101,21 @@ export default function Footer() {
         </div>
 
         {/* --- Bottom Segment: Legal Matrix Line --- */}
-        <div className="footer-copyright-row text-center mt-5 pt-4">
-          <p className="copyright-text mb-0">© 2026 Babies Resort Nursery. All Rights Reserved.</p>
-        </div>
+        <div className="mt-5 pt-3 text-center footer-credits-border">
+  <p className="mb-1 text-muted fw-normal" style={{ fontSize: '0.9rem' }}>
+    Designed & Developed By
+  </p>
+  
+  <a 
+    href="https://wa.me/971509132555" 
+    target="_blank" 
+    rel="noopener noreferrer"
+    className="mb-0 fw-bold text-dark d-inline-flex align-items-center" 
+    style={{ fontSize: '1.1rem', textDecoration: 'none', color: 'inherit' }}
+  >
+    Credo Digital Designs LLC SPC
+  </a>
+</div>
 
       </div>
     </footer>

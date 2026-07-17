@@ -119,7 +119,7 @@ export default function Contact() {
             <img src={map} alt="Map Location" className="map-display-img" />
           </div>
           <a 
-            href="https://maps.google.com" 
+            href="https://maps.apple/p/DFn~bxAPFrA_r4" 
             target="_blank" 
             rel="noopener noreferrer" 
             className="open-map-link d-inline-block mt-3"
